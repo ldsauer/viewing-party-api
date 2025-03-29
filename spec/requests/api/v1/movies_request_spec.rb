@@ -9,8 +9,8 @@ RSpec.describe "Movies API", type: :request do
         MovieData.new({ id: 3, title: "V for Vendetta", vote_average: 9.9 })
       ]
       
-      allow(Moviegateway). to recieve(:top_rated).and_return(fake_movies)
-      
+      allow(MovieGateway).to receive(:top_rated).and_return(fake_movies)
+
       get '/api/v1/movies'
 
       expect(response).to be_successful

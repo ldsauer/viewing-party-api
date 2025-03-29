@@ -4,7 +4,7 @@ class MovieGateway
 
     json = JSON.parse(response.body, symbolize_names: true)
     json[:results].first(20).map do |movie_data|
-      Movie.new(movie_data)
+      MovieData.new(movie_data)
     end
   end
 

@@ -1,4 +1,4 @@
-class Movie
+class MovieData
   attr_reader :tmdb_id,
               :title,
               :vote_average
